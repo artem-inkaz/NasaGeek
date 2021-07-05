@@ -11,5 +11,6 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="wikipedia">Википедия: свободная энциклопедия</string>
+    <string name="title_theme">Выберите тему приложения</string>
 
 </resources>

@@ -2,15 +2,93 @@
     <!-- Base application theme. -->
     <style name="Theme.NasaGeek" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
-        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimary">@color/color_mars</item>
+        <item name="colorPrimaryVariant">@color/color_moon</item>
+        <item name="colorOnPrimary">@color/color_kosmos</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_700</item>
-        <item name="colorOnSecondary">@color/black</item>
+        <item name="colorSecondary">@color/color_mars_secondary</item>
+        <item name="colorSecondaryVariant">@color/color_moon_secondary</item>
+        <item name="colorOnSecondary">@color/color_kosmos_secondary</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="AppThemeLight" parent="Theme.NasaGeek">
+        <item name="android:textColor">@color/design_default_color_primary</item>
+        <item name="android:fontFamily">cursive</item>
+        <item name="android:textStyle">italic</item>
+        <item name="colorText" >@color/black</item>
+        <item name="colorBackground">#352802</item>
+        <item name="colorTextResult">#FF352802</item>
+        <item name="colorBackgroundEditText">#5570B6</item>
+        <item name="colorTextButton">#FF1FCDBD</item>
+        <item name="colorIconTintDark">#FFFFFF</item>
+        <item name="colorIconTintLight">#F9DA22</item>
+    </style>
+
+    <style name="AppThemeDark" parent="Theme.NasaGeek">
+        <item name="android:textColor">#8C9E9C</item>
+        <item name="android:fontFamily">sans-serif-black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="colorText" >#012433</item>
+        <item name="colorBackground">#B7B8A9</item>
+        <item name="colorTextResult">#032E2A</item>
+        <item name="colorBackgroundEditText">#98E8F3</item>
+        <item name="colorTextButton">#D16F91</item>
+        <item name="colorIconTintDark">#224DF9</item>
+        <item name="colorIconTintLight">#FFFFFF</item>
+    </style>
+
+    <style name="AppThemeMars" parent="Theme.NasaGeek">
+        <item name="android:textColor">#845B1F</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:textStyle">italic</item>
+        <item name="colorText" >#ED7017</item>
+        <item name="colorBackground">#B69E45</item>
+        <item name="colorTextResult">#A45617</item>
+        <item name="colorBackgroundEditText">#ED7017</item>
+        <item name="colorTextButton">#A45617</item>
+        <item name="colorIconTintDark">#ED7017</item>
+        <item name="colorIconTintLight">#CA7438</item>
+    </style>
+
+    <style name="AppThemeMoon" parent="Theme.NasaGeek">
+        <item name="android:textColor">#717171</item>
+        <item name="android:fontFamily">@font/architectsdaughter_regular</item>
+        <item name="android:textStyle">bold</item>
+        <item name="colorText" >#818181</item>
+        <item name="colorBackground">#A5A5A5</item>
+        <item name="colorTextResult">#454545</item>
+        <item name="colorBackgroundEditText">#F1F1F1</item>
+        <item name="colorTextButton">#454545</item>
+        <item name="colorIconTintDark">#F1F1F1</item>
+        <item name="colorIconTintLight">#DFDFDF</item>
+    </style>
+
+    <style name="AppThemeKosmos" parent="Theme.NasaGeek">
+        <item name="android:textColor">#9250A2</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textStyle">bold</item>
+        <item name="colorText" >#E7BDA9</item>
+        <item name="colorBackground">#8CAADA</item>
+        <item name="colorTextResult">#F5C1F0</item>
+        <item name="colorBackgroundEditText">#F1F1F1</item>
+        <item name="colorTextButton">#60687C</item>
+        <item name="colorIconTintDark">#6E5473</item>
+        <item name="colorIconTintLight">#E7BDA9</item>
+    </style>
+
+    <style name="AppButton" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">?attr/colorSecondary</item>
+    </style>
+
+    <style name="AppTextField" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="boxBackgroundColor">@color/text_field_background</item>
+    </style>
+
+    <style name="AppCard" parent="Widget.MaterialComponents.CardView">
+        <item name="cardElevation">8dp</item>
+    </style>
+
 </resources>

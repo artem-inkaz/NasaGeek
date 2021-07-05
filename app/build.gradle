@@ -79,4 +79,6 @@ dependencies {
     implementation 'com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:0.8.0'
     //Coil for Image download
     implementation 'io.coil-kt:coil:1.1.0'
+    // Shared Preferences
+    implementation "androidx.preference:preference-ktx:1.1.1"
 }

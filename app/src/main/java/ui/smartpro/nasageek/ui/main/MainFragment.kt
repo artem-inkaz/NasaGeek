@@ -16,6 +16,7 @@ import com.google.android.material.bottomappbar.BottomAppBar
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import kotlinx.android.synthetic.main.main_fragment.*
 import ui.smartpro.nasageek.MainActivity
+import ui.smartpro.nasageek.settings.SettingFragment
 import ui.smartpro.nasageek.wiki.WikiFragment
 
 class MainFragment : Fragment() {
@@ -57,7 +58,8 @@ class MainFragment : Fragment() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.app_bar_fav -> toast("Favourite")
-            R.id.app_bar_settings -> toast("Settings")
+            R.id.app_bar_settings -> activity?.supportFragmentManager?.beginTransaction()
+                    ?.replace(R.id.container, SettingFragment())?.addToBackStack(null)?.commit()
             android.R.id.home -> {
                 activity?.let {
                     BottomNavigationDrawerFragment().show(it.supportFragmentManager, "tag")
