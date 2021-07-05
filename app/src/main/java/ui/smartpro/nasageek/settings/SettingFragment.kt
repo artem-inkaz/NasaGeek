@@ -1,41 +1,23 @@
 package ui.smartpro.nasageek.settings
 
-import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.app.ActivityCompat.recreate
 import androidx.fragment.app.Fragment
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.fragment_setting.*
-import ui.smartpro.nasageek.MainActivity
-import ui.smartpro.nasageek.R
+import ui.smartpro.nasageek.*
+import ui.smartpro.nasageek.ThemeMode
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [SettingFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class SettingFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
     private var paramTheme:Int = 0 // параметр стиля темы
 
+    private var saveTheme: ThemeMode? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -47,7 +29,6 @@ class SettingFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         selectTheme(view)
     }
 
@@ -55,38 +36,39 @@ class SettingFragment : Fragment() {
 
         lightTheme.setOnClickListener {
           paramTheme =0
-
+          AppPreferences.setTheme(paramTheme)
+            requireContext().switchLightMode()
+            recreate(requireActivity())
       }
 
         darkTheme.setOnClickListener {
             paramTheme =1
+            AppPreferences.setTheme(paramTheme)
+            requireContext().switchNightMode()
+            recreate(requireActivity())
         }
 
         marsTheme.setOnClickListener {
             paramTheme =2
+
+            AppPreferences.setTheme(paramTheme)
+            requireContext().switchMarsMode()
+            recreate(requireActivity())
         }
 
         moonTheme.setOnClickListener {
             paramTheme =3
+            AppPreferences.setTheme(paramTheme)
+            requireContext().switchMoonMode()
+            recreate(requireActivity())
         }
 
         kosmosTheme.setOnClickListener {
             paramTheme =4
+            AppPreferences.setTheme(paramTheme)
+           requireContext().switchKosmosMode()
+            recreate(requireActivity())
         }
 
-        Snackbar.make(view,"Выбрана тема: ${paramTheme}",Snackbar.LENGTH_LONG).show()
-
-        newInstance(paramTheme)
-//        requireContext().setAppTheme(paramTheme)
-    }
-
-    companion object {
-        @JvmStatic
-        fun newInstance(paramTheme: Int) =
-                SettingFragment().apply {
-                    arguments = Bundle().apply {
-                        putInt(MainActivity.BUNDLE_EXTRA_THEME, paramTheme)
-                    }
-                }
     }
 }

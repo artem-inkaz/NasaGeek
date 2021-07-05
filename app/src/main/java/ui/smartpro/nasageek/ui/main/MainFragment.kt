@@ -121,6 +121,7 @@ class MainFragment : Fragment() {
                 bottom_app_bar.replaceMenu(R.menu.menu_bottom_bar)
             }
         }
+
     }
 
     private fun setBottomSheetBehavior(bottomSheet: ConstraintLayout) {
