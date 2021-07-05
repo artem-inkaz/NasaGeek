@@ -13,5 +13,11 @@
     <string name="wikipedia">Википедия: свободная энциклопедия</string>
     <string name="title_theme">Выберите тему приложения</string>
     <string name="icontheme">iconTheme</string>
+    <string name="themeSelect">Выберите цветовую тему приложения</string>
+    <string name="darkTheme">Темная</string>
+    <string name="lightTheme">Светлая</string>
+    <string name="moonTheme">Лунная</string>
+    <string name="marsTheme">Марсианская</string>
+    <string name="kosmosTheme">Kosmos</string>
 
 </resources>
