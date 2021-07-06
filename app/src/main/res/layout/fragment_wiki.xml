@@ -5,6 +5,7 @@
     android:background="?attr/colorBackground"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginBottom="50dp"
     tools:context=".wiki.WikiFragment">
 
     <com.google.android.material.textfield.TextInputLayout

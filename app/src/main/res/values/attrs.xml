@@ -7,5 +7,6 @@
     <attr name="colorTextButton" format="color" />
     <attr name="colorIconTintDark" format="color" />
     <attr name="colorIconTintLight" format="color" />
+    <attr name="tabTextColor" format="color"  />
 
 </resources>

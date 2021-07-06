@@ -22,6 +22,7 @@
         <item name="colorTextButton">#FF1FCDBD</item>
         <item name="colorIconTintDark">#FFFFFF</item>
         <item name="colorIconTintLight">#F9DA22</item>
+        <item name="tabTextColor">#FF1B1A17</item>
     </style>
 
     <style name="AppThemeLight" parent="Theme.NasaGeek">
@@ -35,6 +36,7 @@
         <item name="colorTextButton">#FF1FCDBD</item>
         <item name="colorIconTintDark">#FFFFFF</item>
         <item name="colorIconTintLight">#F9DA22</item>
+        <item name="tabTextColor">#081C12</item>
     </style>
 
     <style name="AppThemeDark" parent="Theme.NasaGeek">
@@ -48,6 +50,7 @@
         <item name="colorTextButton">#D16F91</item>
         <item name="colorIconTintDark">#224DF9</item>
         <item name="colorIconTintLight">#FFFFFF</item>
+        <item name="tabTextColor">#100207</item>
     </style>
 
     <style name="AppThemeMars" parent="Theme.NasaGeek">
@@ -61,6 +64,7 @@
         <item name="colorTextButton">#A45617</item>
         <item name="colorIconTintDark">#ED7017</item>
         <item name="colorIconTintLight">#CA7438</item>
+        <item name="tabTextColor">#220908</item>
     </style>
 
     <style name="AppThemeMoon" parent="Theme.NasaGeek">
@@ -74,6 +78,7 @@
         <item name="colorTextButton">#454545</item>
         <item name="colorIconTintDark">#F1F1F1</item>
         <item name="colorIconTintLight">#DFDFDF</item>
+        <item name="tabTextColor">#17171C</item>
     </style>
 
     <style name="AppThemeKosmos" parent="Theme.NasaGeek">
@@ -87,10 +92,17 @@
         <item name="colorTextButton">#60687C</item>
         <item name="colorIconTintDark">#6E5473</item>
         <item name="colorIconTintLight">#E7BDA9</item>
+        <item name="tabTextColor">#190803</item>
     </style>
 
     <style name="AppButton" parent="Widget.MaterialComponents.Button">
         <item name="backgroundTint">?attr/colorSecondary</item>
+    </style>
+
+    <style name="TabLayoutTextAppearance">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#222222</item>
+        <item name="android:textAllCaps">true</item>
     </style>
 
     <style name="AppTextField" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">

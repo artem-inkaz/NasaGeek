@@ -19,5 +19,6 @@
     <string name="moonTheme">Лунная</string>
     <string name="marsTheme">Марсианская</string>
     <string name="kosmosTheme">Kosmos</string>
+    <string name="home">Home</string>
 
 </resources>
