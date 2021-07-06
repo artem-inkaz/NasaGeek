@@ -1,4 +1,4 @@
-package ui.smartpro.nasageek
+package ui.smartpro.nasageek.interfaces
 
 interface ThemeMode {
 

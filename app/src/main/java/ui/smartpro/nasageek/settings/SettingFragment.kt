@@ -6,10 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.app.ActivityCompat.recreate
 import androidx.fragment.app.Fragment
-import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.fragment_setting.*
 import ui.smartpro.nasageek.*
-import ui.smartpro.nasageek.ThemeMode
+import ui.smartpro.nasageek.interfaces.ThemeMode
 
 class SettingFragment : Fragment() {
 
