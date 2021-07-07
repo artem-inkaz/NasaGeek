@@ -15,9 +15,6 @@ import ui.smartpro.nasageek.R
 import ui.smartpro.nasageek.api.State
 import ui.smartpro.nasageek.databinding.EarthFragmentBinding
 import ui.smartpro.nasageek.earth.adapter.EarthAdapter
-import ui.smartpro.nasageek.mars.MarsViewModel
-import ui.smartpro.nasageek.mars.MarsViewModelFactory
-import ui.smartpro.nasageek.mars.adapter.MarsAdapter
 
 class EarthFragment : Fragment() {
 
@@ -33,8 +30,8 @@ class EarthFragment : Fragment() {
     private val viewModel: EarthViewModel by viewModels { EarthViewModelFactory() }
 
     override fun onCreateView(
-            inflater: LayoutInflater, container: ViewGroup?,
-            savedInstanceState: Bundle?,
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?,
     ): View? {
         _binding = EarthFragmentBinding.inflate(inflater, container, false)
         val view = binding.root
@@ -85,7 +82,6 @@ class EarthFragment : Fragment() {
             }
         })
     }
-
 
     private fun Fragment.toast(string: String?) {
         Toast.makeText(context, string, Toast.LENGTH_SHORT).apply {

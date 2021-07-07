@@ -12,8 +12,8 @@ interface MarsApi {
 
     @GET("mars-photos/api/v1/rovers/curiosity/photos")
     suspend fun getPictureOfMars(
-        @Query("sol") sol: Int  = 1000,
-        @Query("camera") camera: String  = "fhaz",
+        @Query("sol") sol: Int = 1000,
+        @Query("camera") camera: String = "fhaz",
         @Query("api_key") apiKey: String = BuildConfig.NASA_API_KEY
     ): MarsApiDtoPhotos
 

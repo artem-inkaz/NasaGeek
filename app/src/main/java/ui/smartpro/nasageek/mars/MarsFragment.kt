@@ -30,8 +30,8 @@ class MarsFragment : Fragment() {
     }
 
     override fun onCreateView(
-            inflater: LayoutInflater, container: ViewGroup?,
-            savedInstanceState: Bundle?,
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?,
     ): View? {
         _binding = MarsFragmentBinding.inflate(inflater, container, false)
         val view = binding.root
@@ -89,5 +89,4 @@ class MarsFragment : Fragment() {
             show()
         }
     }
-
 }

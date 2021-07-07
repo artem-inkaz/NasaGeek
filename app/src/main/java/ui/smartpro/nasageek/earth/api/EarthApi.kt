@@ -3,7 +3,6 @@ package ui.smartpro.nasageek.earth.api
 import retrofit2.http.GET
 import retrofit2.http.Query
 import ui.smartpro.nasageek.BuildConfig
-import ui.smartpro.nasageek.mars.api.MarsApiDtoPhotos
 
 interface EarthApi {
 

@@ -8,7 +8,6 @@ import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
 import ui.smartpro.nasageek.api.State
 import ui.smartpro.nasageek.earth.api.EarthApi
-import ui.smartpro.nasageek.earth.api.EarthApiDto
 import ui.smartpro.nasageek.earth.api.EarthModel
 import ui.smartpro.nasageek.earth.api.convertEarthDtoToDomain
 import java.lang.Exception
