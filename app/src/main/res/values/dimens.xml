@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="textSizeDescription">13sp</dimen>
+    <dimen name="view_medium_gap">8dp</dimen>
+    <dimen name="view_big_gap">16dp</dimen>
 </resources>

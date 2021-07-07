@@ -40,8 +40,7 @@ class MainFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-//        setBottomSheetBehavior(view.findViewById(R.id.bottom_sheet_container))
-//        setBottomAppBar(view)
+
         setObservers()
     }
 

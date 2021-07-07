@@ -35,7 +35,6 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         AppPreferences.getPreference(this)
         bundle = AppPreferences.getTheme()
         Log.d("TT", "Наша тема ${bundle}")
@@ -45,26 +44,16 @@ class MainActivity : AppCompatActivity() {
         _binding = MainActivityBinding.inflate(layoutInflater)
         // root овый макет
         setContentView(mBinding.root)
-//        if (savedInstanceState == null) {
-//            supportFragmentManager.beginTransaction()
-//                    .replace(R.id.container, MainFragment.newInstance())
-//                    .commitNow()
-//        }
-
         setBottomSheetBehavior(findViewById(R.id.bottom_sheet_container))
         setBottomAppBar()
-
         viewPagerInit()
-
     }
 
 
     private fun viewPagerInit() {
         val vpAdapter = ViewPagerAdapter(this)
        viewPager.adapter = vpAdapter
-
 //        mBinding.viewPager.setCurrentItem(0, true)
-
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
             tab.text = vpAdapter.fragments[position].javaClass.name
         }.attach()
@@ -98,15 +87,12 @@ class MainActivity : AppCompatActivity() {
         return true
     }
 
-
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.app_bar_fav -> toast("Favourite")
             R.id.app_bar_settings -> supportFragmentManager.beginTransaction()
                 .replace(R.id.container, SettingFragment()).addToBackStack(null)?.commit()
             android.R.id.home -> viewPager.setCurrentItem(0, true)
-
-
         }
         return super.onOptionsItemSelected(item)
     }

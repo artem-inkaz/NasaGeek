@@ -26,6 +26,9 @@ android {
         }
         debug{
             buildConfigField "String", "BASE_URL", "\"https://api.nasa.gov/\""
+
+            buildConfigField "String", "BASE_URL_MARS", "\"http://mars.jpl.nasa.gov/msl-raw-images/\""
+            buildConfigField "String", "BASE_IMAGE_URL_MARS", "\"http://mars.jpl.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/01000/opgs/edr/fcam\""
         }
     }
     buildTypes.each {
@@ -87,4 +90,9 @@ dependencies {
     implementation "androidx.preference:preference-ktx:1.1.1"
     //ViewPager
     implementation "androidx.viewpager2:viewpager2:1.0.0"
+    // Recyclerview
+    implementation "androidx.recyclerview:recyclerview:1.1.0"
+    // Glide
+    implementation 'com.github.bumptech.glide:glide:4.4.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 }
