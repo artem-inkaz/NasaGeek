@@ -1,7 +1,8 @@
 package ui.smartpro.nasageek.earth.api
 
 data class EarthModel(
-    val identifier: Int,
+    val identifier: Long,
     val image: String,
-    val earth_date: String
+    val date: String,
+    val imagePath: String,
 )
