@@ -62,11 +62,11 @@ class MarsAdapter() :
                 .apply(imageOption)
                 .into(imageView)
 
-            imageView.load(url) {
-//                lifecycle(itemView.context)
-                error(R.drawable.ic_load_error_vector)
-                placeholder(R.drawable.ic_no_photo_vector)
-            }
+//            imageView.load(url) {
+////                lifecycle(itemView.context)
+//                error(R.drawable.ic_load_error_vector)
+//                placeholder(R.drawable.ic_no_photo_vector)
+//            }
             datePhoto.text = marsModel.earth_date
         }
     }

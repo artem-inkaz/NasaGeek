@@ -27,7 +27,6 @@ class MainViewModel(private val apiService: NasaApi) : ViewModel() {
                 // get Fotos of day
                 val nasaFoto = apiService.getPictureOfTheDay()
 
-
                 _mutableLiveDataNasa.value = nasaFoto
                 _state.value = State.Success(nasaFoto)
 
