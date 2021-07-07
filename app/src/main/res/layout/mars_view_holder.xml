@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    app:cardBackgroundColor="?attr/colorText"
+    android:layout_marginStart="@dimen/view_big_gap"
+    android:layout_marginEnd="@dimen/view_big_gap"
+    android:layout_marginBottom="@dimen/view_big_gap"
+    android:padding="@dimen/view_medium_gap"
+    app:cardCornerRadius="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="500dp"
+    app:strokeColor="?attr/colorBackground"
+    app:strokeWidth="1dp"
+    app:cardPreventCornerOverlap="false">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <ui.smartpro.nasageek.utils.EquilateralImageView
+        android:id="@+id/image_view"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_gravity="center"
+        android:contentDescription="@string/photo_of_the_day_stub"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_no_photo_vector" />
+
+    <TextView
+        android:id="@+id/date_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/descriptionNasa"
+        android:textSize="@dimen/textSizeDescription"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_view"
+        tools:text="Дата  фото Mars" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

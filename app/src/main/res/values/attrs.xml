@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="colorText" format="color" />
+    <attr name="colorBackground" format="color" />
+    <attr name="colorTextResult" format="color" />
+    <attr name="colorBackgroundEditText" format="color" />
+    <attr name="colorTextButton" format="color" />
+    <attr name="colorIconTintDark" format="color" />
+    <attr name="colorIconTintLight" format="color" />
+    <attr name="tabTextColor" format="color"  />
+
+</resources>
