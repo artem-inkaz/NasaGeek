@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?attr/colorBackground"
     android:layout_marginBottom="50dp"
+    android:background="?attr/colorBackground"
     tools:context=".settings.SettingFragment">
 
     <TextView
@@ -18,14 +18,17 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/darkTheme"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
         android:layout_marginStart="22dp"
         android:layout_marginTop="13dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/darkTitle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lightTheme"
         app:srcCompat="@drawable/ic_dark_luna" />
@@ -34,96 +37,133 @@
         android:id="@+id/darkTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
         android:layout_marginTop="7dp"
+        android:layout_marginEnd="22dp"
         android:text="@string/darkTheme"
+        app:layout_constraintEnd_toStartOf="@+id/moonTheme"
         app:layout_constraintStart_toEndOf="@+id/darkTheme"
-        app:layout_constraintTop_toTopOf="@+id/darkTheme" />
+        app:layout_constraintTop_toTopOf="@+id/darkTheme"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/lightTheme"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
         android:layout_marginStart="22dp"
-        android:layout_marginTop="13dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/lightTitle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titleTheme"
-        app:srcCompat="@drawable/ic_dark_sun" />
+        app:srcCompat="@drawable/ic_dark_sun"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/lightTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="12dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="17dp"
         android:text="@string/lightTheme"
         app:layout_constraintEnd_toStartOf="@+id/marsTheme"
-        app:layout_constraintTop_toTopOf="@+id/marsTheme" />
+        app:layout_constraintStart_toEndOf="@+id/lightTheme"
+        app:layout_constraintTop_toTopOf="@+id/lightTheme"
+        tools:ignore="MissingConstraints" />
+
 
     <ImageView
         android:id="@+id/moonTheme"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="@+id/darkTheme"
-        app:layout_constraintEnd_toEndOf="@+id/marsTheme"
-        app:layout_constraintStart_toStartOf="@+id/marsTheme"
-        app:layout_constraintTop_toTopOf="@+id/darkTheme"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginEnd="237dp"
+        app:layout_constraintBottom_toTopOf="@+id/glBottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/darkTitle"
+        app:layout_constraintTop_toBottomOf="@+id/marsTheme"
+        app:layout_constraintVertical_bias="0.52"
         app:srcCompat="@mipmap/ic_moon_logo_foreground" />
 
     <TextView
         android:id="@+id/moonTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
         android:layout_marginTop="7dp"
         android:text="@string/moonTheme"
-        app:layout_constraintStart_toEndOf="@+id/moonTheme"
-        app:layout_constraintTop_toTopOf="@+id/moonTheme" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/moonTheme"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/marsTheme"
         android:layout_width="36dp"
         android:layout_height="36dp"
-        android:layout_marginTop="13dp"
-        android:layout_marginBottom="13dp"
-        app:layout_constraintBottom_toTopOf="@+id/moonTheme"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.37"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleTheme"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="38dp"
+        app:layout_constraintBottom_toBottomOf="@+id/moonTitle"
+        app:layout_constraintEnd_toStartOf="@+id/marsTitle"
+        app:layout_constraintStart_toEndOf="@+id/lightTitle"
+        app:layout_constraintTop_toTopOf="@+id/titleTheme"
         app:srcCompat="@mipmap/ic_mars_logo_foreground" />
 
     <TextView
         android:id="@+id/marsTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="22dp"
         android:text="@string/marsTheme"
+        app:layout_constraintEnd_toStartOf="@+id/kosmosTheme"
         app:layout_constraintStart_toEndOf="@+id/marsTheme"
-        app:layout_constraintTop_toTopOf="@+id/marsTheme" />
+        app:layout_constraintTop_toTopOf="@+id/marsTheme"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/kosmosTheme"
         android:layout_width="36dp"
         android:layout_height="36dp"
-        android:layout_marginTop="13dp"
-        android:layout_marginEnd="80dp"
-        android:layout_marginBottom="13dp"
-        app:layout_constraintBottom_toTopOf="@+id/moonTheme"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleTheme"
-        app:srcCompat="@mipmap/ic_kosmos_logo_foreground" />
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="38dp"
+        app:layout_constraintBottom_toTopOf="@+id/glBottom"
+        app:layout_constraintEnd_toStartOf="@+id/kosmosTitle"
+        app:layout_constraintStart_toEndOf="@+id/marsTitle"
+        app:layout_constraintTop_toTopOf="@+id/titleTheme"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@mipmap/ic_kosmos_logo_foreground"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/kosmosTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="25dp"
         android:text="@string/kosmosTheme"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/kosmosTheme" />
+        app:layout_constraintStart_toEndOf="@+id/kosmosTheme"
+        app:layout_constraintTop_toTopOf="@+id/kosmosTheme"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="416dp"
+        android:src="@drawable/ic_earth"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="170dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

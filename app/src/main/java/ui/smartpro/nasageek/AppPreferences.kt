@@ -5,6 +5,7 @@ import android.content.SharedPreferences
 
 object AppPreferences {
 
+    private const val INIT_FLAG = "INIT_FLAG"
     private const val INIT_THEME = "INIT_THEME"
     private const val NAME_PREF = "PREFERENCES"
 

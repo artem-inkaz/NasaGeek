@@ -1,15 +1,14 @@
 package ui.smartpro.nasageek
 
-import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.view.*
 import android.widget.Toast
-import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
+import androidx.core.os.bundleOf
 import com.google.android.material.bottomappbar.BottomAppBar
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.tabs.TabLayout
@@ -18,7 +17,6 @@ import kotlinx.android.synthetic.main.main_activity.*
 import kotlinx.android.synthetic.main.view_pager.*
 import ui.smartpro.nasageek.databinding.MainActivityBinding
 import ui.smartpro.nasageek.settings.SettingFragment
-import ui.smartpro.nasageek.ui.main.BottomNavigationDrawerFragment
 import ui.smartpro.nasageek.ui.main.MainFragment
 import ui.smartpro.nasageek.viewpager.ViewPagerAdapter
 
@@ -39,7 +37,13 @@ class MainActivity : AppCompatActivity() {
         bundle = AppPreferences.getTheme()
         Log.d("TT", "Наша тема ${bundle}")
         bundle?.let { onThemeActivity(it) }
-
+//        Bundle().putInt(SettingFragment.BUNDLE_EXTRA_SETING, bundle!!)
+        Bundle().also {
+            it.putInt(SettingFragment.BUNDLE_EXTRA_SETING, bundle!!)
+//            fragment.arguments = bundleOf("token" to "s1231")
+        }
+        val fragment = SettingFragment()
+        fragment.arguments= bundleOf(SettingFragment.BUNDLE_EXTRA_SETING to bundle)
         // инициализация нашей связки
         _binding = MainActivityBinding.inflate(layoutInflater)
         // root овый макет
@@ -74,6 +78,7 @@ class MainActivity : AppCompatActivity() {
         super.onStart()
         Log.d("TAG", "START")
         bundle = AppPreferences.getTheme()
+        Bundle().putInt(SettingFragment.BUNDLE_EXTRA_SETING, bundle!!)
         Log.d("BUNDLE", "Наша тема ${bundle}")
     }
 
