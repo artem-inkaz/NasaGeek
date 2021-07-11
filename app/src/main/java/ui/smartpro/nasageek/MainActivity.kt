@@ -17,6 +17,7 @@ import kotlinx.android.synthetic.main.main_activity.*
 import kotlinx.android.synthetic.main.view_pager.*
 import ui.smartpro.nasageek.databinding.MainActivityBinding
 import ui.smartpro.nasageek.settings.SettingFragment
+import ui.smartpro.nasageek.ui.main.BottomNavigationDrawerFragment
 import ui.smartpro.nasageek.ui.main.MainFragment
 import ui.smartpro.nasageek.viewpager.ViewPagerAdapter
 
@@ -97,7 +98,14 @@ class MainActivity : AppCompatActivity() {
             R.id.app_bar_fav -> toast("Favourite")
             R.id.app_bar_settings -> supportFragmentManager.beginTransaction()
                 .replace(R.id.container, SettingFragment()).addToBackStack(null)?.commit()
-            android.R.id.home -> viewPager.setCurrentItem(0, true)
+            R.id.app_bar_theme->viewPager.setCurrentItem(0, true)
+            android.R.id.home ->
+            {
+                this.let {
+                    BottomNavigationDrawerFragment().show(it.supportFragmentManager, "tag")
+                }
+            }
+
         }
         return super.onOptionsItemSelected(item)
     }
