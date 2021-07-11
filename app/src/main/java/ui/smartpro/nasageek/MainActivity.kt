@@ -1,5 +1,7 @@
 package ui.smartpro.nasageek
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.view.*
@@ -181,12 +183,31 @@ class MainActivity : AppCompatActivity() {
         when (position) {
             EARTH -> {
                 setEarthTabHighlighted(layoutInflater)
+                main_backdrop.setImageResource(R.drawable.space)
+                main_backdrop.setOnClickListener {
+                    startActivity(Intent(Intent.ACTION_VIEW).apply {
+                        data = Uri.parse("https://www.nasa.gov/feature/goddard/2021/nasa-space-lasers-map-meltwater-lakes-in-antarctica-with-striking-precision")
+
+                    })
+                }
             }
             MARS -> {
                 setMarsTabHighlighted(layoutInflater)
+                main_backdrop.setImageResource(R.drawable.mars)
+                main_backdrop.setOnClickListener {
+                    startActivity(Intent(Intent.ACTION_VIEW).apply {
+                        data = Uri.parse("https://www.nasa.gov/feature/ames/curiosity-rover-finds-patches-of-rock-record-on-mars-erased")
+                    })
+                }
             }
             MAIN -> {
                 setPhotoTabHighlighted(layoutInflater)
+                main_backdrop.setImageResource(R.drawable.solar)
+                main_backdrop.setOnClickListener {
+                    startActivity(Intent(Intent.ACTION_VIEW).apply {
+                        data = Uri.parse("https://www.nasa.gov/feature/goddard/2021/operations-underway-to-restore-payload-computer-on-nasas-hubble-space-telescope")
+                    })
+                }
             }
             else -> {
                 setPhotoTabHighlighted(layoutInflater)
