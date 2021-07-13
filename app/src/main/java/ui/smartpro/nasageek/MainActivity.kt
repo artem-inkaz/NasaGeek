@@ -18,6 +18,7 @@ import com.google.android.material.tabs.TabLayoutMediator
 import kotlinx.android.synthetic.main.main_activity.*
 import kotlinx.android.synthetic.main.view_pager.*
 import ui.smartpro.nasageek.databinding.MainActivityBinding
+import ui.smartpro.nasageek.databinding.Motion12DrawerlayoutBinding
 import ui.smartpro.nasageek.settings.SettingFragment
 import ui.smartpro.nasageek.ui.main.BottomNavigationDrawerFragment
 import ui.smartpro.nasageek.ui.main.MainFragment
@@ -29,7 +30,8 @@ class MainActivity : AppCompatActivity() {
 
     var bundle: Int? = null
 
-    private var _binding: MainActivityBinding? = null
+//    private var _binding: MainActivityBinding? = null
+    private var _binding: Motion12DrawerlayoutBinding? = null
     // сссылка ссылается на наш _binding данная строчка val mBinding get() = _binding!! позволит избежать проверки на null
     // _binding!! - будет 100% не null
     val mBinding get() = _binding!!
@@ -48,7 +50,7 @@ class MainActivity : AppCompatActivity() {
         val fragment = SettingFragment()
         fragment.arguments= bundleOf(SettingFragment.BUNDLE_EXTRA_SETING to bundle)
         // инициализация нашей связки
-        _binding = MainActivityBinding.inflate(layoutInflater)
+        _binding = Motion12DrawerlayoutBinding.inflate(layoutInflater)
         // root овый макет
         setContentView(mBinding.root)
         setBottomSheetBehavior(findViewById(R.id.bottom_sheet_container))
