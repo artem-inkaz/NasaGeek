@@ -14,7 +14,10 @@ import androidx.recyclerview.widget.RecyclerView
 import ui.smartpro.nasageek.R
 import ui.smartpro.nasageek.api.State
 import ui.smartpro.nasageek.databinding.MarsFragmentBinding
+import ui.smartpro.nasageek.earth.api.EarthModel
+import ui.smartpro.nasageek.interfaces.OnItemViewClickListener
 import ui.smartpro.nasageek.mars.adapter.MarsAdapter
+import ui.smartpro.nasageek.mars.api.MarsModel
 
 class MarsFragment : Fragment() {
 
@@ -42,7 +45,7 @@ class MarsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         recycler = binding.marsListRecyclerView
         recycler?.layoutManager = LinearLayoutManager(activity)
-        recycler?.adapter = MarsAdapter()
+        recycler?.adapter = MarsAdapter(marsclickListener)
 
         setObservers()
     }
@@ -87,6 +90,14 @@ class MarsFragment : Fragment() {
         Toast.makeText(context, string, Toast.LENGTH_SHORT).apply {
             setGravity(Gravity.BOTTOM, 0, 250)
             show()
+        }
+    }
+
+    private val marsclickListener = object : OnItemViewClickListener {
+        override fun onItemViewClick(earthModel: EarthModel) {
+        }
+
+        override fun onItemViewClick(marsModel: MarsModel) {
         }
     }
 }

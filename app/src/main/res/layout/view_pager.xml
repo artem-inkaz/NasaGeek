@@ -53,11 +53,11 @@
         android:gravity="bottom"
         app:layout_collapseMode="pin"
         app:tabTextColor="?attr/tabTextColor"
-        app:tabGravity="center"
+        app:tabGravity="fill"
         app:layout_scrollFlags="scroll|snap"
         app:tabIndicatorColor="?attr/colorAccent"
-
         app:tabSelectedTextColor="?attr/colorAccent"
+        android:stateListAnimator="@animator/toolbar_elevation"
          />
 
     </com.google.android.material.appbar.CollapsingToolbarLayout>
