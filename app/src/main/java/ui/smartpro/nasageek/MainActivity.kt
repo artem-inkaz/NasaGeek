@@ -53,7 +53,7 @@ class MainActivity : AppCompatActivity() {
         _binding = Motion12DrawerlayoutBinding.inflate(layoutInflater)
         // root овый макет
         setContentView(mBinding.root)
-        setBottomSheetBehavior(findViewById(R.id.bottom_sheet_container))
+//        setBottomSheetBehavior(findViewById(R.id.bottom_sheet_container))
         setBottomAppBar()
         viewPagerInit()
     }

@@ -49,7 +49,7 @@
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="?attr/actionBarSize"
         android:gravity="bottom"
         app:layout_collapseMode="pin"
         app:tabTextColor="?attr/tabTextColor"
@@ -63,7 +63,5 @@
     </com.google.android.material.appbar.CollapsingToolbarLayout>
 
     </com.google.android.material.appbar.AppBarLayout>
-
-
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

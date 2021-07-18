@@ -11,7 +11,7 @@ import ui.smartpro.nasageek.BuildConfig
 // Конвертер чтобы в результирующем классе MarsModel были все нужные поля
 suspend fun convertEarthDtoToDomain(
     earthApiDtoPhotos: List<EarthApiDto>
-): List<EarthModel> =
+): MutableList<EarthModel> =
     withContext(Dispatchers.Default) {
 
         earthApiDtoPhotos.map { earthApiDto: EarthApiDto ->
@@ -28,7 +28,7 @@ suspend fun convertEarthDtoToDomain(
                 )
             )
         }
-    }
+    } as MutableList<EarthModel>
 
 suspend fun convertText(str: String): String =
     withContext(Dispatchers.Default) {

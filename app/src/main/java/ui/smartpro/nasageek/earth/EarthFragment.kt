@@ -1,6 +1,5 @@
 package ui.smartpro.nasageek.earth
 
-import android.graphics.Movie
 import android.os.Build
 import android.os.Bundle
 import android.view.Gravity
@@ -8,14 +7,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.fragment.app.viewModels
+import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import androidx.transition.ChangeBounds
 import androidx.transition.ChangeImageTransform
 import androidx.transition.TransitionManager
 import androidx.transition.TransitionSet
@@ -29,7 +27,10 @@ import ui.smartpro.nasageek.databinding.EarthFragmentBinding
 import ui.smartpro.nasageek.earth.adapter.EarthAdapter
 import ui.smartpro.nasageek.earth.api.EarthModel
 import ui.smartpro.nasageek.interfaces.OnItemViewClickListener
+import ui.smartpro.nasageek.interfaces.OnStartDragListener
 import ui.smartpro.nasageek.mars.api.MarsModel
+import ui.smartpro.nasageek.recyclerview.ItemTouchHelperCallback
+import java.util.*
 
 class EarthFragment : Fragment() {
 
@@ -37,6 +38,13 @@ class EarthFragment : Fragment() {
     private val binding get() = _binding!!
     private var recycler: RecyclerView? = null
     private var progressBar: ProgressBar? = null
+
+    private lateinit var adapter: EarthAdapter
+    lateinit var itemTouchHelper: ItemTouchHelper
+
+    var touchHelper : ItemTouchHelper? = null
+
+    private var earthData: MutableList<EarthModel> = mutableListOf()
 
     companion object {
         fun newInstance() = EarthFragment()
@@ -56,15 +64,15 @@ class EarthFragment : Fragment() {
     @RequiresApi(Build.VERSION_CODES.M)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        adapter= EarthAdapter(earthclickListener,earthStartDrag)
+
         recycler = binding.earthListRecyclerView
         recycler?.layoutManager = LinearLayoutManager(activity)
-        recycler?.adapter = EarthAdapter(earthclickListener)
-
-        scroll_view.setOnScrollChangeListener { _, _, _, _, _ ->
-            tabLayout.isSelected = scroll_view.canScrollVertically(-1)
-        }
+        recycler?.adapter = adapter
 
         setObservers()
+        itemTouchHelper = ItemTouchHelper(ItemTouchHelperCallback(adapter))
+        itemTouchHelper.attachToRecyclerView(recycler)
     }
 
     override fun onStart() {
@@ -108,6 +116,13 @@ class EarthFragment : Fragment() {
             setGravity(Gravity.BOTTOM, 0, 250)
             show()
         }
+    }
+
+    private val earthStartDrag = object : OnStartDragListener {
+        override fun onStartDrag(viewHolder: RecyclerView.ViewHolder) {
+            itemTouchHelper.startDrag(viewHolder)
+        }
+
     }
 
     private val earthclickListener = object : OnItemViewClickListener {

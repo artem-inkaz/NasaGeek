@@ -17,10 +17,10 @@ class EarthViewModel(private val apiService: EarthApi) : ViewModel() {
     private val _state = MutableLiveData<State>(State.Init())
     val state: LiveData<State> get() = _state
 
-    private val _mutableLiveDataEarth = MutableLiveData<List<EarthModel>>(emptyList())
-    val earthFotoLive: LiveData<List<EarthModel>> get() = _mutableLiveDataEarth
+    private val _mutableLiveDataEarth = MutableLiveData<MutableList<EarthModel>>()
+    val earthFotoLive: LiveData<MutableList<EarthModel>> get() = _mutableLiveDataEarth
 
-    var listEarth = listOf<EarthModel>()
+    var listEarth = mutableListOf<EarthModel>()
 
     fun updateData() {
 

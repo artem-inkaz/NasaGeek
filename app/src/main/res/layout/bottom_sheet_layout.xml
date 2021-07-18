@@ -14,7 +14,7 @@
     <View
         android:id="@+id/bottom_sheet_line"
         android:layout_width="125dp"
-        android:layout_height="125dp"
+        android:layout_height="700dp"
         android:layout_marginTop="5dp"
         android:background="#660D5AE1"
         app:layout_constraintEnd_toEndOf="parent"
