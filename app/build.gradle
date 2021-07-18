@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-android-extensions'
+//    id 'org.jetbrains.kotlin.plugin.serialization'
 }
 
 android {
@@ -22,6 +24,18 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+        debug{
+            buildConfigField "String", "BASE_URL", "\"https://api.nasa.gov/\""
+
+            buildConfigField "String", "BASE_URL_MARS", "\"http://mars.jpl.nasa.gov/msl-raw-images/\""
+            buildConfigField "String", "BASE_IMAGE_URL_MARS", "\"http://mars.jpl.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/01000/opgs/edr/fcam\""
+        }
+    }
+    buildTypes.each {
+        Properties properties = new Properties()
+        properties.load(project.rootProject.file("nasa.properties").newDataInputStream())
+        def nasaApiKey = properties.getProperty("NASA_API_KEY", "")
+        it.buildConfigField "String", "NASA_API_KEY", nasaApiKey
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -30,18 +44,57 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    androidExtensions {
+        experimental = true
+    }
 }
 
 dependencies {
-
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.core:core-ktx:1.5.0'
     implementation 'androidx.appcompat:appcompat:1.3.0'
-    implementation 'com.google.android.material:material:1.3.0'
+    implementation 'com.google.android.material:material:1.4.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
-    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.3.1'
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1'
-    testImplementation 'junit:junit:4.+'
+
+    implementation "androidx.fragment:fragment-ktx:1.2.5"
+    //Test
+    testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    // Coroutines, serialization
+    implementation "org.jetbrains.kotlinx:kotlinx-serialization-json:1.0.1"
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.3'
+    // LiveData
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.3.1'
+    // ViewModel
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1'
+    //GSON
+    implementation 'com.google.code.gson:gson:2.8.6'
+    // Okhttp
+    implementation 'com.squareup.okhttp3:okhttp:4.9.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.0'
+    implementation 'com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:0.8.0'
+    //Coil for Image download
+    implementation 'io.coil-kt:coil:1.1.0'
+    // Shared Preferences
+    implementation "androidx.preference:preference-ktx:1.1.1"
+    //ViewPager
+    implementation "androidx.viewpager2:viewpager2:1.0.0"
+    // Recyclerview
+    implementation "androidx.recyclerview:recyclerview:1.2.1"
+    // Glide
+    implementation 'com.github.bumptech.glide:glide:4.4.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    //Motion
+//    implementation 'androidx.constraintlayout:constraintlayout:2.0.0-beta6'
 }
