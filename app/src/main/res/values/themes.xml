@@ -23,6 +23,7 @@
         <item name="colorIconTintDark">#FFFFFF</item>
         <item name="colorIconTintLight">#F9DA22</item>
         <item name="tabTextColor">#FF1B1A17</item>
+
     </style>
 
     <style name="AppThemeLight" parent="Theme.NasaGeek">

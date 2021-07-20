@@ -1,11 +1,19 @@
 package ui.smartpro.nasageek.ui.main
 
+import android.graphics.Color
+import android.graphics.Typeface.BOLD
 import android.os.Bundle
+import android.text.Spannable
+import android.text.SpannableString
+import android.text.style.BackgroundColorSpan
+import android.text.style.ForegroundColorSpan
+import android.text.style.StyleSpan
 import android.view.*
 import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.text.toSpannable
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.transition.ChangeBounds
@@ -72,7 +80,10 @@ class MainFragment : Fragment() {
                         error(R.drawable.ic_load_error_vector)
                         placeholder(R.drawable.ic_no_photo_vector)
                     }
-                    message.text = description
+//                    message.text = description
+                    // применили Spannable раскрасску
+                    message.text  = description?.let { spanText(it) }
+
                     progressBar?.visibility = View.INVISIBLE
                 }
                 is State.Loading -> {
@@ -84,6 +95,19 @@ class MainFragment : Fragment() {
                 }
             }
         })
+    }
+
+    private fun spanText(text: String): Spannable {
+        val spannable = text.toSpannable()
+        spannable.setSpan(
+                BackgroundColorSpan(Color.RED),
+                8, 100,
+                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+        spannable.setSpan(
+                StyleSpan(BOLD),
+                8, spannable.length,
+                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+            return spannable
     }
 
     private fun enlargeImage(){

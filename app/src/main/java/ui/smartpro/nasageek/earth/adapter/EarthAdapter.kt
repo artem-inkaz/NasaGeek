@@ -2,12 +2,17 @@ package ui.smartpro.nasageek.earth.adapter
 
 import android.annotation.SuppressLint
 import android.graphics.Color
+import android.graphics.Typeface
+import android.text.Spannable
+import android.text.style.BackgroundColorSpan
+import android.text.style.StyleSpan
 import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils.loadAnimation
 import android.widget.ImageView
+import androidx.core.text.toSpannable
 import androidx.recyclerview.widget.RecyclerView
 import androidx.transition.ChangeBounds
 import androidx.transition.ChangeImageTransform
@@ -143,7 +148,9 @@ class EarthAdapter(
 
             datePhoto.text = earthModel.date
 
-            earthTextView.text= earthModel.identifier.toString()
+//            earthTextView.text= earthModel.identifier.toString()
+            // Добавили раскраску Spannable
+            earthTextView.text= earthModel.identifier.let { spanText(it.toString()) }
 
             addItemImageView.setOnClickListener {
 //                appendItem()
@@ -253,5 +260,18 @@ class EarthAdapter(
         override fun onItemClear() {
             itemView.setBackgroundColor(Color.WHITE)
         }
+    }
+
+    private fun spanText(text: String): Spannable {
+        val spannable = text.toSpannable()
+        spannable.setSpan(
+                BackgroundColorSpan(Color.WHITE),
+                0, 14,
+                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+        spannable.setSpan(
+                StyleSpan(Typeface.BOLD),
+                8, spannable.length,
+                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+        return spannable
     }
 }

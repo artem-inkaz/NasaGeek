@@ -1,10 +1,16 @@
 package ui.smartpro.nasageek.mars.adapter
 
 import android.annotation.SuppressLint
+import android.graphics.Color
+import android.graphics.Typeface
+import android.text.Spannable
+import android.text.style.BackgroundColorSpan
+import android.text.style.StyleSpan
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import androidx.core.text.toSpannable
 import androidx.recyclerview.widget.RecyclerView
 import androidx.transition.ChangeBounds
 import androidx.transition.ChangeImageTransform
@@ -75,13 +81,16 @@ class MarsAdapter(
                 .load(marsModel.img_src)
                 .apply(imageOption)
                 .into(imageView)
-
+                // Coil
 //            imageView.load(url) {
 ////                lifecycle(itemView.context)
 //                error(R.drawable.ic_load_error_vector)
 //                placeholder(R.drawable.ic_no_photo_vector)
 //            }
-            datePhoto.text = marsModel.earth_date
+
+//            datePhoto.text = marsModel.earth_date
+            // Добавили раскраску Spannable
+            datePhoto.text = marsModel.earth_date?.let { spanText(it) }
 
             imageView.setOnClickListener {
                 isExpanded = !isExpanded
@@ -99,5 +108,18 @@ class MarsAdapter(
                         if (isExpanded) ImageView.ScaleType.CENTER_CROP else ImageView.ScaleType.FIT_CENTER
             }
         }
+    }
+
+    private fun spanText(text: String): Spannable {
+        val spannable = text.toSpannable()
+        spannable.setSpan(
+                BackgroundColorSpan(Color.RED),
+                0, 10,
+                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+        spannable.setSpan(
+                StyleSpan(Typeface.BOLD),
+                8, spannable.length,
+                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+        return spannable
     }
 }
