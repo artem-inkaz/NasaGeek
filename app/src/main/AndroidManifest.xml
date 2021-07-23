@@ -12,17 +12,18 @@
         android:roundIcon="@drawable/ic_nasa_logo_foreground"
         android:supportsRtl="true"
         android:theme="@style/Theme.NasaGeek">
-        <activity
-            android:name=".animactivity.ScrollingActivity"
-            android:label="@string/title_activity_scrolling"
-            android:theme="@style/Theme.NasaGeek.NoActionBar"></activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".splash.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".animactivity.ScrollingActivity"
+            android:label="@string/title_activity_scrolling"
+            android:theme="@style/Theme.NasaGeek.NoActionBar" />
+        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>

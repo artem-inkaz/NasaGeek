@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".splash.SplashActivity">
+
+    <ImageView
+        android:id="@+id/ellipseBackground"
+        android:layout_width="254dp"
+        android:layout_height="230dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.421"
+        app:srcCompat="@drawable/ellipse1" />
+
+    <ImageView
+        android:id="@+id/ellipsewhite"
+        android:layout_width="166dp"
+        android:layout_height="172dp"
+        android:visibility="visible"
+        android:translationZ="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ellipseBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ellipseBackground"
+        app:srcCompat="@drawable/ellipse17" />
+
+    <ImageView
+        android:id="@+id/ellipse1"
+        android:layout_width="12dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ellipseBackground"
+        app:srcCompat="@drawable/ellipse8" />
+
+    <ImageView
+        android:id="@+id/ellipse2"
+        android:layout_width="12dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="72dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.563"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ellipseBackground"
+        app:srcCompat="@drawable/ellipse8" />
+
+    <ImageView
+        android:id="@+id/ellipse3"
+        android:layout_width="12dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="44dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.385"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ellipseBackground"
+        app:srcCompat="@drawable/ellipse8" />
+
+    <ImageView
+        android:id="@+id/ellipse4"
+        android:layout_width="12dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.674"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ellipseBackground"
+        app:srcCompat="@drawable/ellipse8" />
+
+    <ImageView
+        android:id="@+id/ellipse5"
+        android:layout_width="12dp"
+        android:layout_height="10dp"
+        android:layout_marginBottom="60dp"
+        app:layout_constraintBottom_toBottomOf="@id/ellipseBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.275"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ellipse8" />
+
+    <ImageView
+        android:id="@+id/ellipse6"
+        android:layout_width="12dp"
+        android:layout_height="10dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="@id/ellipseBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ellipse8" />
+
+    <ImageView
+        android:id="@+id/ellipse7"
+        android:layout_width="12dp"
+        android:layout_height="10dp"
+        android:layout_marginBottom="52dp"
+        app:layout_constraintBottom_toBottomOf="@id/ellipseBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.704"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:srcCompat="@drawable/ellipse8" />
+
+    <ImageView
+        android:id="@+id/star1"
+        android:layout_width="11dp"
+        android:layout_height="13dp"
+        android:layout_marginStart="120dp"
+        app:layout_constraintBottom_toTopOf="@id/ellipsewhite"
+        app:layout_constraintStart_toStartOf="@id/ellipseBackground"
+        app:layout_constraintTop_toTopOf="@id/ellipseBackground"
+        app:srcCompat="@drawable/star11" />
+
+    <ImageView
+        android:id="@+id/star2"
+        android:layout_width="11dp"
+        android:layout_height="13dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="@id/ellipseBackground"
+        app:layout_constraintHorizontal_bias="0.995"
+        app:layout_constraintStart_toStartOf="@id/ellipseBackground"
+        app:layout_constraintTop_toTopOf="@id/ellipseBackground"
+        app:srcCompat="@drawable/star11" />
+
+    <ImageView
+        android:id="@+id/star3"
+        android:layout_width="11dp"
+        android:layout_height="13dp"
+        android:layout_marginStart="44dp"
+        app:layout_constraintStart_toStartOf="@id/ellipseBackground"
+        app:layout_constraintTop_toTopOf="@id/textLogo"
+        app:srcCompat="@drawable/star11" />
+
+    <ImageView
+        android:id="@+id/star4"
+        android:layout_width="11dp"
+        android:layout_height="13dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="@id/ellipseBackground"
+        app:layout_constraintTop_toBottomOf="@id/textLogo"
+        app:srcCompat="@drawable/star11" />
+
+    <ImageView
+        android:id="@+id/star5"
+        android:layout_width="11dp"
+        android:layout_height="13dp"
+        android:layout_marginEnd="96dp"
+        app:layout_constraintBottom_toBottomOf="@id/ellipseBackground"
+        app:layout_constraintEnd_toEndOf="@id/ellipseBackground"
+        app:layout_constraintTop_toBottomOf="@id/ellipsewhite"
+        app:layout_constraintVertical_bias="0.562"
+        app:srcCompat="@drawable/star11" />
+
+    <ImageView
+        android:id="@+id/redStar"
+        android:layout_width="381dp"
+        android:layout_height="418dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.402"
+        app:srcCompat="@drawable/star14" />
+
+    <TextView
+        android:id="@+id/textLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:fontFamily="@font/trainone_regular"
+        android:text="@string/nasa"
+        android:textColor="@color/white"
+        android:textSize="70sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@id/ellipseBackground"
+        app:layout_constraintStart_toStartOf="@id/ellipseBackground"
+        app:layout_constraintTop_toTopOf="@+id/ellipseBackground" />
+</androidx.constraintlayout.widget.ConstraintLayout>
