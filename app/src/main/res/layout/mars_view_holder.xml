@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/card_view"
-    app:cardBackgroundColor="?attr/colorText"
+    app:cardBackgroundColor="?attr/colorBackground"
     android:layout_marginStart="@dimen/view_big_gap"
     android:layout_marginEnd="@dimen/view_big_gap"
     android:layout_marginBottom="@dimen/view_big_gap"

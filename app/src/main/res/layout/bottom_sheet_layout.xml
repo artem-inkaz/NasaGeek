@@ -5,7 +5,7 @@
     android:id="@+id/bottom_sheet_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ECEC14"
+    android:background="?attr/colorBackground"
     android:visibility="gone"
     app:behavior_hideable="true"
     app:behavior_peekHeight="50dp"
@@ -16,7 +16,7 @@
         android:layout_width="125dp"
         android:layout_height="700dp"
         android:layout_marginTop="5dp"
-        android:background="#660D5AE1"
+        android:background="?attr/colorBackground"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

@@ -12,16 +12,16 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
-        <item name="android:textColor">@color/teal_200</item>
+        <item name="android:textColor">#ffffff</item>
         <item name="android:fontFamily">cursive</item>
         <item name="android:textStyle">italic</item>
-        <item name="colorText" >#FF422C0D</item>
-        <item name="colorBackground">#FFFFFF</item>
+        <item name="colorText" >#ffffff</item>
+        <item name="colorBackground">#8CC6C1</item>
         <item name="colorTextResult">#D34273</item>
         <item name="colorBackgroundEditText">#5570B6</item>
         <item name="colorTextButton">#FF1FCDBD</item>
-        <item name="colorIconTintDark">#FFFFFF</item>
-        <item name="colorIconTintLight">#2CA196</item>
+        <item name="colorIconTintDark">#FF24504C</item>
+        <item name="colorIconTintLight">#24504C</item>
 
     </style>
 </resources>
