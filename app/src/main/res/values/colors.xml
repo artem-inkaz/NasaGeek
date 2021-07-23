@@ -7,4 +7,13 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="color_gray">#66000000</color>
+    <color name="color_mars">#bf360c</color>
+    <color name="color_mars_secondary">#f9683a</color>
+    <color name="color_moon">#455a64</color>
+    <color name="color_moon_secondary">#718792</color>
+    <color name="color_kosmos">#4a148c</color>
+    <color name="color_kosmos_secondary">#7c43bd</color>
+    <color name="colorAccent40Alfa">#662962FF</color>
 </resources>

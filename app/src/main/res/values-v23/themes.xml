@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.NasaGeek" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#9ccc65</item>
+        <item name="colorPrimaryVariant">@color/purple_500</item>
+        <item name="colorOnPrimary">@color/colorAccent</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/color_mars_secondary</item>
+        <item name="colorSecondaryVariant">@color/color_moon_secondary</item>
+        <item name="colorOnSecondary">@color/color_kosmos_secondary</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="android:textColor">#000000</item>
+        <item name="android:fontFamily">cursive</item>
+        <item name="android:textStyle">italic</item>
+        <item name="colorText">#000000</item>
+        <item name="colorBackground">#9ccc65</item>
+        <item name="colorTextResult">#000000</item>
+        <item name="colorBackgroundEditText">#FFFFFF</item>
+        <item name="colorTextButton">#cfff95</item>
+        <item name="colorIconTintDark">#6b9b37</item>
+        <item name="colorIconTintLight">#cfff95</item>
+        <item name="tabTextColor">#FF1B1A17</item>
+    </style>
+
+    <style name="AppThemeLight" parent="Theme.NasaGeek">
+        <item name="android:textColor">#000000</item>
+        <item name="android:fontFamily">cursive</item>
+        <item name="android:textStyle">italic</item>
+        <item name="colorText">#000000</item>
+        <item name="colorBackground">#9ccc65</item>
+        <item name="colorTextResult">#000000</item>
+        <item name="colorBackgroundEditText">#000000</item>
+        <item name="colorTextButton">#cfff95</item>
+        <item name="colorIconTintDark">#6b9b37</item>
+        <item name="colorIconTintLight">#cfff95</item>
+        <item name="tabTextColor">#ffffff</item>
+    </style>
+
+    <style name="AppThemeDark" parent="Theme.NasaGeek">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:fontFamily">sans-serif-black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="colorText">#ffffff</item>
+        <item name="colorBackground">#212121</item>
+        <item name="colorTextResult">#ffffff</item>
+        <item name="colorBackgroundEditText">#ffffff</item>
+        <item name="colorTextButton">#ffffff</item>
+        <item name="colorIconTintDark">#000000</item>
+        <item name="colorIconTintLight">#484848</item>
+        <item name="tabTextColor">#ffffff</item>
+    </style>
+
+    <style name="AppThemeMars" parent="Theme.NasaGeek">
+        <item name="android:textColor">#000000</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:textStyle">italic</item>
+        <item name="colorText">#000000</item>
+        <item name="colorBackground">#bf360c</item>
+        <item name="colorTextResult">#000000</item>
+        <item name="colorBackgroundEditText">#eeeeee</item>
+        <item name="colorTextButton">#ffffff</item>
+        <item name="colorIconTintDark">#870000</item>
+        <item name="colorIconTintLight">#f9683a</item>
+        <item name="tabTextColor">#ffffff</item>
+    </style>
+
+    <style name="AppThemeMoon" parent="Theme.NasaGeek">
+        <item name="android:textColor">#000000</item>
+        <item name="android:fontFamily">@font/architectsdaughter_regular</item>
+        <item name="android:textStyle">bold</item>
+        <item name="colorText">#000000</item>
+        <item name="colorBackground">#455a64</item>
+        <item name="colorTextResult">#ffffff</item>
+        <item name="colorBackgroundEditText">#F1F1F1</item>
+        <item name="colorTextButton">#ffffff</item>
+        <item name="colorIconTintDark">#1c313a</item>
+        <item name="colorIconTintLight">#718792</item>
+        <item name="tabTextColor">#ffffff</item>
+    </style>
+
+    <style name="AppThemeKosmos" parent="Theme.NasaGeek">
+        <item name="android:textColor">#000000</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textStyle">bold</item>
+        <item name="colorText">#000000</item>
+        <item name="colorBackground">#4a148c</item>
+        <item name="colorTextResult">#000000</item>
+        <item name="colorBackgroundEditText">#F1F1F1</item>
+        <item name="colorTextButton">#ffffff</item>
+        <item name="colorIconTintDark">#12005e</item>
+        <item name="colorIconTintLight">#7c43bd</item>
+        <item name="tabTextColor">#ffffff</item>
+    </style>
+</resources>
